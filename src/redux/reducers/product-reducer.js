@@ -1,3 +1,5 @@
+import {actionTypes} from "../consts/action-types"
+
 const initialState = {
   products: [
     {
@@ -8,9 +10,9 @@ const initialState = {
   ],
 };
 
-export const productReducer = (state, { type, payload }) => {
+export const productReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case SET_PRODUCTS:
+    case actionTypes.SET_PRODUCTS:
       return {
         ...state,
       };
@@ -18,3 +20,4 @@ export const productReducer = (state, { type, payload }) => {
       return state;
   }
 };
+
