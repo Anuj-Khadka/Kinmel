@@ -1,23 +1,19 @@
-import { Component, useState } from "react";
 import "./App.css";
-import { BrowserRouter, Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import ProductListing from "./components/ProductListing";
-import ProductComponent from "./components/ProductComponent";
-import ProductDetails from "./components/ProductDetail";
+import ProductDetails from "./components/ProductDetails";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <BrowserRouter>
+    <Router>
       <Header />
-      <Router>
-        <Route path="/" component={ProductListing} />
-        <Route path="/product/productId" component={ProductComponent} />
+      <Routes>
+        <Route path="/" element={<ProductListing />} />
+        <Route path="/product/:productId" element={<ProductDetails />} />
         <Route>404 Not Found</Route>
-      </Router>
-    </BrowserRouter>
+      </Routes>
+    </Router>
   );
 }
 
