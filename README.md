@@ -1,1 +1,1 @@
-A new ecommerce project build with react and redux
+A new ecommerce project build with React and Redux
