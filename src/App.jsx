@@ -7,8 +7,7 @@ import ProductDetails from "./components/ProductDetails";
 function App() {
   return (
     <Router>
-      <Header />
-    
+      <Header />    
       <Routes>
         <Route path="/" element={<ProductListing />} />
         <Route path="/product/:productId" element={<ProductDetails />} />
