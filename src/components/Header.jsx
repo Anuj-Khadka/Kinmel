@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="ui py-3 fixed menu">
-      <div className="ui container center">
-        <h2>Kinmel</h2>
+    <div className="navbar">
+      <div className="nav-item brand-box">
+        <h2 id="brand-name">Kinmel</h2>
       </div>
     </div>
   );
