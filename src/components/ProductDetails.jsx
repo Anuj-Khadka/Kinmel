@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   selectedProduct,
   removeSelectedProduct,
+  fetchProduct,  
 } from "../redux/actions/product-actions";
 
 const ProductDetails = () => {
@@ -13,20 +14,21 @@ const ProductDetails = () => {
   const { id, title, image, price, category } = product;
   const dispatch = useDispatch();
   useEffect(() => {
-    if (productId && productId !== "") fetchProduct();
+    // if (productId && productId !== "") fetchProduct();
+    if (productId && productId !== "") dispatch(fetchProduct(productId));
     return () => {
       dispatch(removeSelectedProduct());
     };
   }, [productId]);
 
   // console.log(product);
-  const fetchProduct = async () => {
-    const response = await axios
-      .get(`https://fakestoreapi.com/products/${productId}`)
-      .catch((error) => console.log("error", error));
-    // console.log("response", response);
-    dispatch(selectedProduct(response.data));
-  };
+  // const fetchProduct = async () => {
+  //   const response = await axios
+  //     .get(`https://fakestoreapi.com/products/${productId}`)
+  //     .catch((error) => console.log("error", error));
+  //   // console.log("response", response);
+  //   dispatch(selectedProduct(response.data));
+  // };
   return (
     <div className="four wide column">
       {Object.keys(product).length === 0 ? (
