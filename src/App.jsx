@@ -1,9 +1,14 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
+import Header from "./components/main-components/Header";
 import ProductListing from "./components/ProductListing";
 import ProductDetails from "./components/ProductDetails";
 import HomeGallery from "./components/HomeGallery";
+import About from "./components/main-components/About";
+import Home from "./components/main-components/Home";
+import Products from "./components/main-components/Products";
+import Blogs from "./components/main-components/Blogs";
+import Contact from "./components/main-components/Contact";
 
 function App() {
   return (
@@ -11,12 +16,16 @@ function App() {
       <Router>
         <Header />
         <div>
-          <HomeGallery />
-          {/* <Routes>
-        <Route path="/" element={<ProductListing />} />
-        <Route path="/product/:productId" element={<ProductDetails />} />
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/about" element={<About/>}/>
+            <Route path="/products" element={<Products/>}/>
+            <Route path="/blogs" element={<Blogs/>}/>
+            <Route path="/contact" element={<Contact/>}/>
+        {/* <Route path="/" element={<ProductListing />} />
+        <Route path="/product/:productId" element={<ProductDetails />} /> */}
         <Route>404 Not Found</Route>
-      </Routes> */}
+      </Routes>
         </div>
       </Router>
     </div>
