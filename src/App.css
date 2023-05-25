@@ -5,9 +5,19 @@
 }
 
 .main-container{
-  background: green;
-  padding: auto 50px;
+  /* background: green; */
+  padding: 20px 50px;
 }
+
+a{
+  text-decoration: none;
+  color: inherit
+}
+
+ul li{
+  list-style: none;
+}
+
 
 /* #root {
   max-width: 1280px;
@@ -16,12 +26,7 @@
   text-align: center;
 } */
 
-.navbar {
-  width: 100%;
-  padding: 20px 50px;
-  background: red;
-  display: flex;
-}
+
 
 
 /* .product-item{
