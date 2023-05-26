@@ -17,15 +17,15 @@ function App() {
         <Header />
         <div>
           <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/about" element={<About/>}/>
-            <Route path="/products" element={<Products/>}/>
-            <Route path="/blogs" element={<Blogs/>}/>
-            <Route path="/contact" element={<Contact/>}/>
-        {/* <Route path="/" element={<ProductListing />} />
-        <Route path="/product/:productId" element={<ProductDetails />} /> */}
-        <Route>404 Not Found</Route>
-      </Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/contact" element={<Contact />} />
+            {/* <Route path="/" element={<ProductListing />} /> */}
+            <Route path="/product/:productId" element={<ProductDetails />} />
+            <Route>404 Not Found</Route>
+          </Routes>
         </div>
       </Router>
     </div>
