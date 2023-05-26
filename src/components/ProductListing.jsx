@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import ProductComponent from "./ProductComponent";
 import {setProducts, fetchProducts} from "../redux/actions/product-actions"
 import axios from "axios";
+import "../assets/css/Products.css"
 
 const ProductListing = () => {
   const products = useSelector((state) => state);
@@ -20,7 +21,7 @@ const ProductListing = () => {
   // };
   console.log(products)
   return (
-    <div className="container">
+    <div className="products-container">
       <ProductComponent />
     </div>
   );
