@@ -1,5 +1,36 @@
-.gallery-container{
-    height: 100px;
-    width: 100px;
-    background: rebeccapurple;
+.gallery-container {
+  /* background: rebeccapurple; */
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 100px);
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+}
+
+.gallery-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+ .main-gallery {
+  background: rgb(0 0 0 / 0.25);
+  overflow: hidden;
+  border-radius: 1rem;
+  grid-area: 1 / 1 / 5 / 4;
+}
+
+
+.category-gallery {
+  background: rgb(0 0 0 / 0.25);
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+#top-category {
+  grid-area: 1 / 4 / 3 / 6;
+}
+#bottom-category {
+  grid-area: 3 / 4 / 5 / 6;
 }
