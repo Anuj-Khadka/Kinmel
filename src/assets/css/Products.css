@@ -95,3 +95,39 @@
     background: #f46a5b;
     color: #f4f4f4;
 }
+
+
+
+
+/* categories  */
+
+.categories-container{
+    /* background: red; */
+    margin: 3rem auto;
+
+}
+
+.categories-container > .categories-heading{
+    font-size: 2.2rem;
+
+}
+
+.categories-container > .categories{
+    display: flex;
+    margin-top: 1rem;
+}
+
+.categories-container > .categories > .category{
+    margin-right: 1rem;
+    border: solid 1px #f46a5b;
+    color: #f46a5b;
+    padding: 0.5rem 1.3rem;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.categories-container > .categories > .category:hover{
+    color: #f4f4f4;
+    background-color: #f46a5b;
+}
