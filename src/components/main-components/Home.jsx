@@ -1,14 +1,16 @@
-import React from 'react'
-import HomeGallery from '../HomeGallery'
-import ProductListing from '../ProductListing'
+import React from "react";
+import HomeGallery from "../HomeGallery";
+import ProductListing from "../ProductListing";
+import Categories from "../Categories";
 
 const Home = () => {
   return (
     <div>
-    <HomeGallery />
-    <ProductListing />
+      <HomeGallery />
+      <Categories />
+      <ProductListing />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
