@@ -12,10 +12,10 @@ export const productReducer = (state = initialState, { type, payload }) => {
         products: payload,
       };
     case actionTypes.FETCH_PRODUCTS:
-      return{
+      return {
         ...state,
-        products: payload
-      }
+        products: payload,
+      };
     default:
       return state;
   }
@@ -27,6 +27,18 @@ export const selectedProductReducer = (state = {}, { type, payload }) => {
       return { ...state, ...payload };
     case actionTypes.REMOVE_SELECTED_PRODUCT:
       return {};
+    default:
+      return state;
+  }
+};
+
+export const fetchCategories = (state = {}, { type, payload }) => {
+  switch (type) {
+    case actionTypes.FETCH_CATEGORIES:
+      return {
+        ...state,
+        categories: payload,
+      };
     default:
       return state;
   }
