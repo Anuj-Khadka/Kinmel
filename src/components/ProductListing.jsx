@@ -19,7 +19,7 @@ const ProductListing = () => {
   //     .catch((error) => console.log("err", error));
   //   dispatch(setProducts(response.data));
   // };
-  console.log(products)
+  // console.log(products)
   return (
     <div className="products-container">
       <ProductComponent />
