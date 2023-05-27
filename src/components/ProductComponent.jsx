@@ -5,6 +5,7 @@ import {MdStar, MdStarOutline, MdStarRate} from "react-icons/md";
 
 const ProductComponent = () => {
   const products = useSelector((state) => state.allProducts.products);
+  // console.log(typeof products)
   const renderList = products.map((product) => {
     const { id, title, image, price, category, rating } = product;
 
@@ -12,7 +13,7 @@ const ProductComponent = () => {
     // for (let i = 0; i < Math.ceil(rating.rate); i++) {
     //   rateContainer.appendChild(<MdStarRate/>)
     // }
-
+    
     return (
       <div className="four wide column product-item" key={id}>
         <Link to={`/product/${id}`}>
