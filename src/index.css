@@ -15,6 +15,11 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+*::selection{
+  color: #f46a5b;
+}
+
 /*
 a {
   font-weight: 500;
