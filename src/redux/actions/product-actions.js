@@ -42,3 +42,11 @@ export const removeSelectedProduct = (product) => {
     type: actionTypes.REMOVE_SELECTED_PRODUCT,
   };
 };
+
+
+export const fetchCategories = ()=>{
+  return async (dispatch)=>{
+    const response = await fakestoreapi.get("/products/categories")
+    dispatch({type: actionTypes.FETCH_CATEGORIES, payload: response.data})
+  }
+}
