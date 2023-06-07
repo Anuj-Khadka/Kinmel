@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchCategories } from "../redux/actions/product-actions";
 import "../assets/css/Products.css";
 import { categoryListContext } from "./ProductListing";
+import {NavLink} from "react-router-dom"
 
 const Categories = ({cat}) => {
   const categories = useSelector((state) => state.categories.categories);
