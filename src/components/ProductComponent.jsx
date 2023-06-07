@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { MdStar, MdStarOutline, MdStarRate } from "react-icons/md";
+import { AnimatePresence, motion } from "framer-motion";
 
 const ProductComponent = ({ cat }) => {
   const products = useSelector((state) => state.allProducts.products);
@@ -15,7 +16,14 @@ const ProductComponent = ({ cat }) => {
     const { id, title, image, price, category, rating } = product;
     if (category === cat || cat === "all" || !cat) {
       return (
-        <div className="four wide column product-item" key={id}>
+        <motion.div
+          layout
+          animate={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+          exit={{ opacity: 0 }}
+          className="four wide column product-item"
+          key={id}
+        >
           <Link to={`/product/${id}`}>
             <div className="ui link cards">
               <div className="card">
@@ -41,7 +49,7 @@ const ProductComponent = ({ cat }) => {
               </div>
             </div>
           </Link>
-        </div>
+        </motion.div>
       );
     }
 

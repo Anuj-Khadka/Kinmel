@@ -4,8 +4,9 @@ import { fetchCategories } from "../redux/actions/product-actions";
 import "../assets/css/Products.css";
 import { categoryListContext } from "./ProductListing";
 
-const Categories = () => {
+const Categories = ({cat}) => {
   const categories = useSelector((state) => state.categories.categories);
+  const [catAll, setCatAll] = useState("")
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchCategories());
@@ -19,6 +20,7 @@ const Categories = () => {
 
   const clickAllHandler = () => {
     filterProducts("all");
+    setCatAll("all")
   };
 
   console.log(categories);
@@ -26,26 +28,27 @@ const Categories = () => {
   return (
     <div className="categories-container">
       <h2 className="categories-heading">Category</h2>
-      <ul className="categories">
-        <li className="category" key="all" onClick={() => clickAllHandler()}>
+      <div className="categories">
+        <button className={catAll === "all" ? "active category" : "category"} key="all" onClick={() => clickAllHandler()}>
           ALL
-        </li>
+        </button>
         {categories &&
           categories.map((category) => {
             const clickHandler = () => {
               filterProducts(category);
             };
             return (
-              <li
-                className="category"
+              <button
+                // className="category"
+                className = {category === cat ? "active category" : "category"}
                 key={category}
                 onClick={() => clickHandler()}
               >
                 {category.toUpperCase()}
-              </li>
+              </button>
             );
           })}
-      </ul>
+      </div>
     </div>
   );
 };

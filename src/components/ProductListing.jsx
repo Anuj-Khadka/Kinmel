@@ -5,6 +5,7 @@ import { setProducts, fetchProducts } from "../redux/actions/product-actions";
 import axios from "axios";
 import "../assets/css/Products.css";
 import Categories from "./Categories";
+import { motion } from "framer-motion";
 
 export const categoryListContext = createContext();
 
@@ -13,7 +14,7 @@ const ProductListing = () => {
   const dispatch = useDispatch();
   const [cat, setCat] = useState(`all`);
   const [productsList, setProductsList] = useState({
-    ...products.allProducts.products
+    ...products.allProducts.products,
   });
 
   useEffect(() => {
@@ -35,10 +36,14 @@ const ProductListing = () => {
   // console.log(products)
   return (
     <categoryListContext.Provider value={{ filterProducts }}>
-      <Categories />
-      <div className="products-container">
+      <Categories cat={cat} />
+      <motion.div
+        
+        layout
+        className="products-container"
+      >
         <ProductComponent cat={cat} productsList={productsList} />
-      </div>
+      </motion.div>
     </categoryListContext.Provider>
   );
 };
