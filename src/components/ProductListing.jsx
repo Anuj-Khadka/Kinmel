@@ -16,7 +16,7 @@ const ProductListing = () => {
   const [productsList, setProductsList] = useState({
     ...products.allProducts.products,
   });
-
+  const {rating} = productsList
   useEffect(() => {
     dispatch(fetchProducts());
   }, []);
@@ -33,7 +33,12 @@ const ProductListing = () => {
   //     .catch((error) => console.log("err", error));
   //   dispatch(setProducts(response.data));
   // };
-  // console.log(products)
+  console.log(products)
+
+
+
+
+  
   return (
     <categoryListContext.Provider value={{ filterProducts }}>
       <Categories cat={cat} />
