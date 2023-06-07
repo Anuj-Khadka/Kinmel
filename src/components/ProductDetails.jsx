@@ -1,17 +1,35 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext, useReducer } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import {
   selectedProduct,
   removeSelectedProduct,
-  fetchProduct,  
+  fetchProduct,
 } from "../redux/actions/product-actions";
+import { MdStar, MdStarOutline } from "react-icons/md";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+
+// useReducer (simple state & action)
+const initialState = 1;
+const cartReducer = (state, action) => {
+  switch (action) {
+    case "increment":
+      return state + 1;
+    case "decrement":
+      return state - 1;
+    case "reset":
+      return initialState;
+    default:
+      return state;
+  }
+};
 
 const ProductDetails = () => {
+  const [itemNums, dispatchCart] = useReducer(cartReducer, initialState);
   const { productId } = useParams();
   const product = useSelector((state) => state.product);
-  const { id, title, image, price, category } = product;
+  const { id, title, description, image, rating, price, category } = product;
   const dispatch = useDispatch();
   useEffect(() => {
     // if (productId && productId !== "") fetchProduct();
@@ -20,6 +38,17 @@ const ProductDetails = () => {
       dispatch(removeSelectedProduct());
     };
   }, [productId]);
+
+  const filledStars = [];
+  const outlineStars = [];
+  // const rates = Math.ceil(rating.rate)
+  const ratingRate = rating?.rate || 0; // Perform null check on rating.rate
+  for (let i = 0; i < ratingRate; i++) {
+    filledStars.push(<MdStar key={i} color="#f46a5b" />);
+  }
+  for (let i = 0; i < 4 - ratingRate; i++) {
+    outlineStars.push(<MdStarOutline key={i} color="#f46a5b" />);
+  }
 
   // console.log(product);
   // const fetchProduct = async () => {
@@ -30,19 +59,69 @@ const ProductDetails = () => {
   //   dispatch(selectedProduct(response.data));
   // };
   return (
-    <div className="four wide column">
+    <div className="four wide column product-detail">
       {Object.keys(product).length === 0 ? (
         <div>Loading.....</div>
       ) : (
-        <div className="ui link cards">
-          <div className="card">
-            <div className="image">
-              <img src={image} alt={title} />
+        <div className="ui link single-product-cards">
+          <div className="single-product-card">
+            <div className="single-product-image aside-detail">
+              <div className="single-image">
+                <img src={image} alt={title} />
+              </div>
+              <div className="desc-image">
+                <div className="mult-images">
+                  <img src={image} alt={title} />
+                </div>
+                <div className="mult-images">
+                  <img src={image} alt={title} />
+                </div>
+                <div className="mult-images">
+                  <img src={image} alt={title} />
+                </div>
+                <div className="mult-images">
+                  <img src={image} alt={title} />
+                </div>
+              </div>
             </div>
-            <div className="content">
-              <div className="header">{title}</div>
-              <div className="meta price">$ {price}</div>
-              <div className="meta">{category}</div>
+            <div className="content aside-detail">
+              <div className="content-desc">
+                <h2 className="header">{title}</h2>
+                <div className="meta meta-desc tertiary">{description}</div>
+                <div className="meta product-rating">
+                  {filledStars}
+                  {outlineStars}{" "}
+                  <span className="rate-count">({rating.count})</span>{" "}
+                </div>
+              </div>
+              <div className=" meta content-pricing">
+                <h3 className="meta price-tag">${price}</h3>
+                <span className="price-tip tertiary">
+                  Available at a lower price from other sellers that may not
+                  offer free Prime shipping.{" "}
+                </span>
+              </div>
+              <div className="meta add-to-cart">
+                <div className="counter">
+                  <button
+                    className="cart-click-btn decrease-cart-btn"
+                    onClick={() => {
+                      dispatchCart("decrement");
+                    }}
+                  >
+                    <AiOutlineMinus size="1rem"/>
+                  </button>
+                  <span className="cart-item-num">{itemNums}</span>
+                  <button
+                    className="cart-click-btn increase-cart-btn"
+                    onClick={() => {
+                      dispatchCart("increment");
+                    }}
+                  >
+                    <AiOutlinePlus size="1rem"/>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
