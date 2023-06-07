@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "../../assets/css/Header.css";
 import {
   MdOutlineAccountCircle,
@@ -14,20 +14,20 @@ const Header = () => {
         <h1 id="brand-name">Kinmel</h1>
       </div>
       <ul className="nav-links">
-        <li className="nav-item active">
-          <Link to="/">Home</Link>
+        <li className="nav-item">
+          <NavLink to="/">Home</NavLink>
         </li>
         <li className="nav-item">
-          <Link to="/about">About</Link>
+          <NavLink to="/about">About</NavLink>
         </li>
         <li className="nav-item">
-          <Link to="/products">Products</Link>
+          <NavLink to="/products">Products</NavLink>
         </li>
         <li className="nav-item">
-          <Link to="/blogs">Blogs</Link>
+          <NavLink to="/blogs">Blogs</NavLink>
         </li>
         <li className="nav-item">
-          <Link to="/contact">Contact</Link>
+          <NavLink to="/contact">Contact</NavLink>
         </li>
       </ul>
       <div className="extra-links">
@@ -43,9 +43,9 @@ const Header = () => {
           </button>
         </form>
         <div className="cart-link nav-link extra-item">
-          <Link to="/cart">
+          <NavLink to="/cart">
             <MdOutlineShoppingBag size="1.3rem" />
-          </Link>
+          </NavLink>
         </div>
         <div className="user-profile nav-link extra-item">
           {/* <Link to={`/profile/${username}`}> */}

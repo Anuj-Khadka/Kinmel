@@ -1,7 +1,14 @@
 .products-container {
   display: grid; 
+<<<<<<< HEAD
   /* grid-auto-flow: column;  */
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+=======
+  grid-auto-flow: column; 
+  /* grid-template-columns: repeat(4, 0.9fr);  */
+  grid-template-columns: repeat(auto-fit, maxmin(8rem, 1fr));
+  grid-template-rows: auto; 
+>>>>>>> 4844e25d0d653ecd54aeccc2a4b9b99e2210d77a
   gap: 1.5rem 1.5rem; 
 }
 
