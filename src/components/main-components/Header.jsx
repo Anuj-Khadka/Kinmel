@@ -15,19 +15,19 @@ const Header = () => {
       </div>
       <ul className="nav-links">
         <li className="nav-item">
-          <NavLink to="/">Home</Link>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/about">About</Link>
+          <NavLink to="/about">About</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/products">Products</Link>
+          <NavLink to="/products">Products</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/blogs">Blogs</Link>
+          <NavLink to="/blogs">Blogs</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/contact">Contact</Link>
+          <NavLink to="/contact">Contact</NavLink>
         </li>
       </ul>
       <div className="extra-links">
