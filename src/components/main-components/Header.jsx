@@ -43,9 +43,9 @@ const Header = () => {
           </button>
         </form>
         <div className="cart-link nav-link extra-item">
-          <Link to="/cart">
+          <NavLink to="/cart">
             <MdOutlineShoppingBag size="1.3rem" />
-          </Link>
+          </NavLink>
         </div>
         <div className="user-profile nav-link extra-item">
           {/* <Link to={`/profile/${username}`}> */}
