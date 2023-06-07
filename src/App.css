@@ -1,23 +1,24 @@
-*, *::after, *::before{
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.main-container{
+.main-container {
   /* background: green; */
   padding: 20px 50px;
 }
 
-a{
+a {
   text-decoration: none;
-  color: inherit
+  color: inherit;
 }
 
-ul li{
+ul li {
   list-style: none;
 }
-
 
 /* #root {
   max-width: 1280px;
@@ -25,9 +26,6 @@ ul li{
   padding: 2rem;
   text-align: center;
 } */
-
-
-
 
 /* .product-item{
   flex: 1 1 200px; 
@@ -59,3 +57,7 @@ margin-right: 20px;
 .cards .card .content{
   flex: 1 1 200px;
 } */
+
+.tertiary {
+  color: #242424b5;
+}
