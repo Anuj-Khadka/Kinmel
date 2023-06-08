@@ -102,24 +102,35 @@ const ProductDetails = () => {
                 </span>
               </div>
               <div className="meta add-to-cart">
-                <div className="counter">
-                  <button
-                    className="cart-click-btn decrease-cart-btn"
-                    onClick={() => {
-                      dispatchCart("decrement");
-                    }}
-                  >
-                    <AiOutlineMinus size="1rem"/>
-                  </button>
-                  <span className="cart-item-num">{itemNums}</span>
-                  <button
-                    className="cart-click-btn increase-cart-btn"
-                    onClick={() => {
-                      dispatchCart("increment");
-                    }}
-                  >
-                    <AiOutlinePlus size="1rem"/>
-                  </button>
+                <div className="item-count">
+                  <div className="counter">
+                    <button
+                      className="cart-click-btn decrease-cart-btn"
+                      onClick={() => {
+                        dispatchCart("decrement");
+                      }}
+                    >
+                      <AiOutlineMinus size="1rem" />
+                    </button>
+                    <span className="cart-item-num">{itemNums}</span>
+                    <button
+                      className="cart-click-btn increase-cart-btn"
+                      onClick={() => {
+                        dispatchCart("increment");
+                      }}
+                    >
+                      <AiOutlinePlus size="1rem" />
+                    </button>
+                  </div>
+                  <div className="stock-items">
+                    Only <span className="stock-count">{Math.floor(Math.random() * 100)} items</span> stocks remaining.
+                    <br />
+                    Don't miss it!
+                  </div>
+                </div>
+                <div className="cart-action-btns">
+                  <button className="cart-action-btn" id="buy-now">Buy Now</button>
+                  <button className="cart-action-btn" id="add-to-cart">Add to Cart</button>
                 </div>
               </div>
             </div>
