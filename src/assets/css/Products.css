@@ -231,3 +231,17 @@
 .cart-item-num{
   padding: 0.5rem 1rem;
 }
+
+.item-count{
+  display: flex;
+}
+
+
+.stock-items{
+  margin-left: 1rem;
+  font-size: 0.9rem;
+}
+
+.stock-items .stock-count{
+  color: #f46a5b
+}
