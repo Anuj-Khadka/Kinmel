@@ -9,6 +9,7 @@ import Home from "./components/main-components/Home";
 import Products from "./components/main-components/Products";
 import Blogs from "./components/main-components/Blogs";
 import Contact from "./components/main-components/Contact";
+import PageNotFound from "./components/main-components/PageNotFound";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             {/* <Route path="/" element={<ProductListing />} /> */}
             <Route path="/product/:productId" element={<ProductDetails />} />
-            <Route>404 Not Found</Route>
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </div>
       </Router>
