@@ -9,18 +9,17 @@
 }
 
 .gallery-container img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
- .main-gallery {
+.main-gallery {
   background: rgb(0 0 0 / 0.25);
   overflow: hidden;
   border-radius: 1rem;
   grid-area: 1 / 1 / 5 / 4;
 }
-
 
 .category-gallery {
   background: rgb(0 0 0 / 0.25);
@@ -33,4 +32,18 @@
 }
 #bottom-category {
   grid-area: 3 / 4 / 5 / 6;
+}
+
+@media screen and (width< 900px) {
+  .gallery-container {
+    grid-template-rows: repeat(3, 100px);
+  }
+
+  .category-gallery {
+    display: none;
+  }
+
+  .main-gallery {
+    grid-area: 1 / 1 / 4 / 6;
+  }
 }
