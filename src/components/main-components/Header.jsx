@@ -13,26 +13,29 @@ const Header = () => {
     const navWrapper = document.getElementById("nav-wrapper");
     const hamMenu = document.querySelectorAll(".ham-menu");
 
-    hamMenu.forEach((hamMenu) => {
-      hamMenu.addEventListener("click", () => {
-        navWrapper.style.right = "-1000px";
-      });
-    });
+    const handleMenuClick = () => {
+      navWrapper.style.right = "-1000px";
+    };
 
-    inputCheckbox.addEventListener("change", () => {
+    const handleCheckboxClick = () => {
       if (inputCheckbox.checked) {
         navWrapper.style.right = "0px";
         navWrapper.style.top = "100px";
       } else {
         navWrapper.style.right = "-1000px";
       }
+    };
+
+    hamMenu.forEach((hamMenu) => {
+      hamMenu.addEventListener("click", handleMenuClick);
     });
+    inputCheckbox.addEventListener("change", handleCheckboxClick);
 
     return () => {
-      inputCheckbox.removeEventListener("change", () => {});
+      inputCheckbox.removeEventListener("change", () => handleCheckboxClick);
 
       hamMenu.forEach((hamMenu) => {
-        hamMenu.removeEventListener("click", () => {});
+        hamMenu.removeEventListener("click", () => handleMenuClick);
       });
     };
   }, []);
