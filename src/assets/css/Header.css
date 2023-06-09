@@ -7,6 +7,10 @@
   align-items: center;
 }
 
+.brand-box {
+  margin-right: 1.5rem;
+}
+
 #brand-name {
   color: #f46a5b;
   cursor: pointer;
@@ -145,8 +149,6 @@
   transform: rotate(-135deg);
 }
 
-
-
 /* responsive  */
 @media screen and (width < 900px) {
   .navbar {
@@ -166,10 +168,10 @@
     right: -1000px;
   }
 
-  .nav-links .nav-item{
+  .nav-links .nav-item {
     margin-right: 0;
     margin-bottom: 0.7rem;
-font-size: 1.3rem;
+    font-size: 1.3rem;
   }
 
   .nav-links,
@@ -184,7 +186,7 @@ font-size: 1.3rem;
     font-size: 1.2rem;
   }
 
-  #search{
+  #search {
     color: #f4f4f4;
   }
 
@@ -192,11 +194,11 @@ font-size: 1.3rem;
     font-size: 1rem;
   }
 
-  #search::placeholder{
+  #search::placeholder {
     color: #f7f7f7;
   }
 
-  .menu-btns{
+  .menu-btns {
     margin-top: 1rem;
   }
 }
