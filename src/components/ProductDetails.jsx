@@ -9,6 +9,8 @@ import {
 } from "../redux/actions/product-actions";
 import { MdStar, MdStarOutline } from "react-icons/md";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+import { CiDeliveryTruck } from "react-icons/ci";
+import { BsClipboardCheck } from "react-icons/bs";
 
 // useReducer (simple state & action)
 const initialState = 1;
@@ -24,6 +26,8 @@ const cartReducer = (state, action) => {
       return state;
   }
 };
+
+const randomStock = Math.floor(Math.random() * 100)
 
 const ProductDetails = () => {
   const [itemNums, dispatchCart] = useReducer(cartReducer, initialState);
@@ -123,14 +127,42 @@ const ProductDetails = () => {
                     </button>
                   </div>
                   <div className="stock-items">
-                    Only <span className="stock-count">{Math.floor(Math.random() * 100)} items</span> stocks remaining.
+                    Only{" "}
+                    <span className="stock-count">
+                      {randomStock} items
+                    </span>{" "}
+                    stocks remaining.
                     <br />
                     Don't miss it!
                   </div>
                 </div>
-                <div className="cart-action-btns">
-                  <button className="cart-action-btn" id="buy-now">Buy Now</button>
-                  <button className="cart-action-btn" id="add-to-cart">Add to Cart</button>
+                <div className="meta cart-action-btns">
+                  <button className="cart-action-btn" id="buy-now">
+                    Buy Now
+                  </button>
+                  <button className="cart-action-btn" id="add-to-cart">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+              <div className="meta extra-info">
+                <div className="extra-sections free-delivery">
+                  <CiDeliveryTruck size="1.5rem" color="#f46a5b" />
+                  <div className="extra-sections-info free-deivery-info">
+                    <p className="extra-info-header">Free Delivery</p>
+                    <a className="extra-info-desc tertiary" href="#">
+                      Enter your postal code for delivery availability.
+                    </a>
+                  </div>
+                </div>
+                <div className="extra-sections cashback">
+                  <BsClipboardCheck size="1.2rem" color="#f46a5b" />
+                  <div className="extra-sections-info cashback-info">
+                    <p className="extra-info-header">Return Delivery</p>
+                    <a className="extra-info-desc tertiary" href="#">
+                      Free 30days delivery return.
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
