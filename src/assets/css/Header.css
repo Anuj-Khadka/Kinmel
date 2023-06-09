@@ -7,63 +7,196 @@
   align-items: center;
 }
 
-#brand-name{
-    color: #f46a5b;
-    cursor: pointer;
+#brand-name {
+  color: #f46a5b;
+  cursor: pointer;
 }
+
+.nav-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-btns {
+  display: flex;
+}
+
+.cart-link {
+  margin-right: 1rem;
+}
+
 .nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.nav-links .nav-item {
+  margin-right: 1.2rem;
+}
+
+.extra-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 0 1 450px;
+  /* padding: 0 1rem; */
+  /* background-color: aqua; */
+}
+
+.extra-links > .extra-item {
+  margin-right: 1rem;
+}
+
+.search-form {
+  width: 80%;
+  border-radius: 0.3rem;
+  border: solid 1px rgba(0 0 0/ 0.07);
+  background: rgb(0 0 0 / 0.07);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.search-form > input {
+  width: 100%;
+  outline: none;
+  border: none;
+  background: transparent;
+  /* background-color: bisque; */
+  padding: 0.5rem 1rem;
+  height: 100%;
+}
+
+.search-form > #search-btn {
+  background: #f46a5b;
+  border: solid 2px #f46a5b;
+  outline: none;
+  padding: 0.3rem;
+  height: 100%;
+  cursor: pointer;
+}
+
+.nav-item:hover,
+.active {
+  color: #f46a5b;
+}
+
+/* hamburger menu  */
+.input-checkbox {
+  display: none;
+}
+
+.nav-button {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: #f46a5b;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.nav-button span,
+.nav-button span::after,
+.nav-button span::before {
+  background: #fff;
+  border-radius: 1rem;
+  height: 2px;
+  width: 32px;
+  transition: 0.3s;
+}
+
+.nav-button span::after,
+.nav-button span::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+}
+
+.nav-button span::before {
+  top: -23px;
+}
+
+.nav-button span::after {
+  top: -32px;
+}
+
+.input-checkbox:checked + .nav-button span {
+  background: transparent;
+  /* width: 0; */
+}
+
+.input-checkbox:checked + .nav-button span::before {
+  top: -15px;
+  transform: rotate(135deg);
+}
+
+.input-checkbox:checked + .nav-button span::after {
+  top: -35px;
+  transform: rotate(-135deg);
+}
+
+
+
+/* responsive  */
+@media screen and (width < 900px) {
+  .navbar {
+    padding: 10px 0;
+  }
+
+  .nav-button {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
+  }
 
-.nav-links .nav-item{
-    margin-right: 1.2rem;
-}
+  .nav-wrapper {
+    padding: 2rem 0;
+    background: #242424;
+    color: #f4f4f4;
+    flex-direction: column;
+    position: absolute;
+    right: -1000px;
+  }
 
-.extra-links{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex: 0 1 450px;
-    /* padding: 0 1rem; */
-    /* background-color: aqua; */
-}
+  .nav-links .nav-item{
+    margin-right: 0;
+    margin-bottom: 0.7rem;
+font-size: 1.3rem;
+  }
 
-.extra-links > .extra-item{
-    margin-right: 1rem;;
-}
+  .nav-links,
+  .extra-links {
+    flex-direction: column;
+  }
 
-.search-form{
-    width: 70%;
-    border-radius: 0.3rem;
-    border: solid 1px rgba( 0 0 0/ 0.07);
-    background: rgb(0 0 0 / 0.07);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-}
-
-.search-form > input{
+  .extra-links {
+    margin-top: 1rem;
+    flex: 0;
     width: 100%;
-    outline: none;
-    border:none;
-    background: transparent;
-    /* background-color: bisque; */
-    padding: 0.5rem 1rem;
-    height: 100%;
-}
+    font-size: 1.2rem;
+  }
 
-.search-form > #search-btn{
-    background: #f46a5b;
-    border: solid 2px #f46a5b;
-    outline: none;
-    padding: 0.3rem;
-    height: 100%;
-    cursor: pointer;
-}
+  #search{
+    color: #f4f4f4;
+  }
 
-.nav-item:hover, .active{
-    color: #f46a5b;
+  #search {
+    font-size: 1rem;
+  }
+
+  #search::placeholder{
+    color: #f7f7f7;
+  }
+
+  .menu-btns{
+    margin-top: 1rem;
+  }
 }
