@@ -169,6 +169,7 @@
   overflow: hidden;
   padding: 1rem;
   background-color: #f7f7f7;
+  cursor: pointer;
 }
 
 .desc-image .mult-images img {
@@ -176,7 +177,7 @@
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: fill;
-  mix-blend-mode: darken;
+  mix-blend-mode:luminosity;
 }
 
 .single-product-card .content .header {
@@ -201,23 +202,21 @@
   line-height: 1.9rem;
 }
 
-.content .content-pricing .price-tip{
+.content .content-pricing .price-tip {
   font-size: 0.8rem;
   font-weight: 500;
 }
 
-
-.add-to-cart .counter{
+.add-to-cart .counter {
   display: inline-flex;
   align-items: center;
   flex-direction: row;
   background: #f4f4f4;
   border-radius: 1rem;
   overflow: hidden;
-  
 }
 
-.cart-click-btn{
+.cart-click-btn {
   outline: none;
   border: none;
   background: none;
@@ -228,20 +227,104 @@
   cursor: pointer;
 }
 
-.cart-item-num{
+.cart-item-num {
   padding: 0.5rem 1rem;
 }
 
-.item-count{
+.item-count {
   display: flex;
 }
 
-
-.stock-items{
+.stock-items {
   margin-left: 1rem;
   font-size: 0.9rem;
 }
 
-.stock-items .stock-count{
-  color: #f46a5b
+.stock-items .stock-count {
+  color: #f46a5b;
+}
+
+.cart-action-btns {
+  margin-top: 1.5rem !important;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.cart-action-btn {
+  border-radius: 3rem;
+  padding: 0.5rem 1.5rem;
+  background: transparent;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#buy-now {
+  border: solid 1px #f46a5b;
+  background: #f46a5b;
+  color: #f4f4f4;
+  margin-right: 1rem;
+}
+
+#buy-now:hover {
+  color: #f46a5b;
+  background: transparent;
+}
+
+#add-to-cart {
+  border: solid 1px #f46a5b;
+  color: #f46a5b;
+}
+#add-to-cart:hover {
+  order: solid 1px #f46a5b;
+  background: #f46a5b;
+  color: #f4f4f4;
+}
+
+.extra-info {
+  margin-top: 2rem !important;
+  border: solid 1px #2424241a;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.extra-sections {
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  /* background: red; */
+}
+.extra-sections-info {
+  margin-left: 1rem;
+  /* background: green; */
+}
+
+.free-delivery {
+  border-bottom: solid 1px #2424241a;
+}
+
+.extra-info-header {
+  font-weight: 500;
+}
+
+.extra-info-desc {
+  /* text-decoration: underline; */
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.4s ease-in-out;
+}
+
+.extra-info-desc:hover {
+  text-decoration: underline;
+}
+
+@media screen and (width<500px) {
+  .cart-action-btn {
+    font-size: 0.9rem;
+  }
+  #buy-now {
+    margin-right: 0.6rem;
+  }
 }
