@@ -8,8 +8,8 @@ import About from "./components/main-components/About";
 import Home from "./components/main-components/Home";
 import Products from "./components/main-components/Products";
 import Blogs from "./components/main-components/Blogs";
-import Contact from "./components/main-components/Contact";
 import PageNotFound from "./components/main-components/PageNotFound";
+import CustomerCare from "./components/main-components/CustomerCare";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
             <Route path="/blogs" element={<Blogs />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/customer-care" element={<CustomerCare />} />
             {/* <Route path="/" element={<ProductListing />} /> */}
             <Route path="/product/:productId" element={<ProductDetails />} />
             <Route path="*" element={<PageNotFound />} />
