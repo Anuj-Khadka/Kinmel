@@ -326,8 +326,6 @@
 }
 
 @media screen and (width<500px) {
-  .categories-container.categories {
-  }
   .cart-action-btn {
     font-size: 0.9rem;
   }
