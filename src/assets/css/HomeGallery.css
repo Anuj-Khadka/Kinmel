@@ -36,7 +36,7 @@
 
 @media screen and (width< 900px) {
   .gallery-container {
-    grid-template-rows: repeat(3, 100px);
+    grid-template-rows: repeat(2, 100px);
   }
 
   .category-gallery {
