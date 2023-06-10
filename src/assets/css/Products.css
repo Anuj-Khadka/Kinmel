@@ -95,9 +95,13 @@
 }
 
 .categories-container > .categories {
-  display: flex;
   margin-top: 1rem;
   background: transparent;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
 }
 
 .categories-container > .categories > .category {
@@ -108,6 +112,7 @@
   padding: 0.5rem 1.3rem;
   border-radius: 2.5rem;
   cursor: pointer;
+  white-space: nowrap;
   transition: all 0.2s ease-in-out;
 }
 
@@ -177,7 +182,7 @@
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: fill;
-  mix-blend-mode:luminosity;
+  mix-blend-mode: luminosity;
 }
 
 .single-product-card .content .header {
@@ -321,9 +326,12 @@
 }
 
 @media screen and (width<500px) {
+  .categories-container.categories {
+  }
   .cart-action-btn {
     font-size: 0.9rem;
   }
+
   #buy-now {
     margin-right: 0.6rem;
   }
