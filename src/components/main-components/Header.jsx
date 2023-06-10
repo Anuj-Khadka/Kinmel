@@ -14,15 +14,21 @@ const Header = () => {
     const hamMenu = document.querySelectorAll(".ham-menu");
 
     const handleMenuClick = () => {
-      navWrapper.style.right = "-1000px";
+      navWrapper.style.top = "-1000px";
+      // navWrapper.style.display= "none";
+      navWrapper.style.transition= "all 0.5s ease-in-out";
     };
-
+    
     const handleCheckboxClick = () => {
       if (inputCheckbox.checked) {
         navWrapper.style.right = "0px";
+        // navWrapper.style.display= "flex";
         navWrapper.style.top = "100px";
+        navWrapper.style.transition= "all 0.5s ease-in-out";
       } else {
-        navWrapper.style.right = "-1000px";
+        // navWrapper.style.display= "none";
+        navWrapper.style.top = "-1000px";
+        navWrapper.style.transition= "all 0.5s ease-in-out";
       }
     };
 
@@ -59,9 +65,9 @@ const Header = () => {
           <li className="nav-item ham-menu">
             <NavLink to="/about">About</NavLink>
           </li>
-          <li className="nav-item ham-menu">
+          {/* <li className="nav-item ham-menu">
             <NavLink to="/products">Products</NavLink>
-          </li>
+          </li> */}
           {/* <li className="nav-item ham-menu">
             <NavLink to="/blogs">Blogs</NavLink>
           </li> */}
@@ -88,9 +94,9 @@ const Header = () => {
               </NavLink>
             </div>
             <div className="user-profile nav-link ham-menu extra-item">
-              {/* <Link to={`/profile/${username}`}> */}
+              <NavLink to={`/profile`}>
               <MdOutlineAccountCircle size="1.3rem" />
-              {/* </Link> */}
+              </NavLink>
             </div>
           </div>
         </div>

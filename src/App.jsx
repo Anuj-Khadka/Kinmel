@@ -10,6 +10,7 @@ import Products from "./components/main-components/Products";
 import Blogs from "./components/main-components/Blogs";
 import PageNotFound from "./components/main-components/PageNotFound";
 import CustomerCare from "./components/main-components/CustomerCare";
+import Profile from "./components/main-components/Profile"
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/customer-care" element={<CustomerCare />} />
-            {/* <Route path="/" element={<ProductListing />} /> */}
+            <Route path="/profile" element={<Profile />} />
             <Route path="/product/:productId" element={<ProductDetails />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>

@@ -1,0 +1,8 @@
+#vibrator {
+  padding: 0.5rem 2rem;
+  background: transparent;
+  border-radius: 1rem;
+  display: block;
+  border: solid 1px #242424;
+  cursor: pointer;
+}

@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 111111;
 }
 
 .brand-box {
@@ -23,6 +24,7 @@
   align-items: center;
   flex-direction: row;
   transition: all 0.3s ease-in-out;
+  z-index: 999;
 }
 
 .menu-btns {
@@ -163,9 +165,11 @@
     padding: 2rem 0;
     background: #242424;
     color: #f4f4f4;
+    /* display: none; */
     flex-direction: column;
     position: absolute;
-    right: -1000px;
+    top: -1000px;
+    transition: all 0.5s ease-in-out;
   }
 
   .nav-links .nav-item {
