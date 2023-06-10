@@ -62,11 +62,11 @@ const Header = () => {
           <li className="nav-item ham-menu">
             <NavLink to="/products">Products</NavLink>
           </li>
-          <li className="nav-item ham-menu">
+          {/* <li className="nav-item ham-menu">
             <NavLink to="/blogs">Blogs</NavLink>
-          </li>
+          </li> */}
           <li className="nav-item ham-menu">
-            <NavLink to="/contact">Contact</NavLink>
+            <NavLink to="/customer-care">Support</NavLink>
           </li>
         </ul>
         <div className="extra-links">
