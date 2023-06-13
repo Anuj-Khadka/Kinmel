@@ -35,7 +35,14 @@ Tech Stack: HTML, CSS, JS, React, Redux, Fake Shop API
 
 ## Glimpse
 <p>
-    <img src="documentations/images/kinmel-home.png" alt="kinmel-glimpse-1" />
+    <img src="documentations/imgs/kinmel-home.png" alt="kinmel-glimpse-1" />
+    <img src="documentations/imgs/kinmel-products.png" alt="kinmel-glimpse-2" />
+    <img src="documentations/imgs/kinmel-filter.png" alt="kinmel-glimpse-3" />
+    <img src="documentations/imgs/kinmel-product-details.png" alt="kinmel-glimpse-6" />
+    <img src="documentations/imgs/kinmel-about.png" alt="kinmel-glimpse-4" />
+    <img src="documentations/imgs/kinmel-services.png" alt="kinmel-glimpse-5" />
+    <img src="documentations/imgs/kinmel-mob-home.png" alt="kinmel-glimpse-7" />
+    <img src="documentations/imgs/kinmel-mob-services.png" alt="kinmel-glimpse-8" />
 </p>
 
 ## How to Run
