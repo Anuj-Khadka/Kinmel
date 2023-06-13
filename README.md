@@ -1,6 +1,7 @@
 # Kinmel
 An ecommerce frontend project build with React JS And Redux.
-<hr/>
+
+![kinmel gif](documentations/vids/kinmel-gif.gif)
 
 Tech Stack: HTML, CSS, JS, React, Redux, Fake Shop API 
 
