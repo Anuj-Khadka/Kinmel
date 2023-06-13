@@ -13,6 +13,10 @@
 - [Features](#features)
 - [Other Details](#other-details)
 
+## General Info
+Our ecommerce website project is a comprehensive platform that enables users to browse, filter, and purchase a wide range of products. With a user-friendly interface, customers can easily navigate through categories, and access detailed product information. The website offers robust filtering options, allowing users to refine their search based on various criteria. Additionally, we provide exceptional customer service, ensuring prompt assistance and addressing any queries or concerns. Each product has a dedicated details page, offering comprehensive descriptions, images, and customer reviews. Our goal is to deliver a seamless and satisfying online shopping experience for customers.
+
+
 ## Technologies
 Built using HTML, CSS, JavaScript, and React, our Todo App offers a seamless and intuitive task management experience.
 <p>
@@ -29,9 +33,14 @@ Built using HTML, CSS, JavaScript, and React, our Todo App offers a seamless and
     <a href="https://www.python.org" target="_blank" rel="noreferrer">
         <img src="https://img.shields.io/badge/React-61DBFB?style=for-the-badge&logo=React&logoColor=blue"
             alt="react" />
+    </a><a href="https://www.python.org" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/badge/React%20Redux-764abc?style=for-the-badge&logo=Redux&logoColor=blue"
+            alt="react" />
+    </a><a href="https://www.python.org" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/badge/Fake%20Shop%20API-61DBFB?style=for-the-badge"
+            alt="react" />
     </a>
 </p>
-Tech Stack: HTML, CSS, JS, React, Redux, Fake Shop API 
 
 ## Glimpse
 <p>
@@ -63,11 +72,10 @@ npm run dev
 
 
 ## Features
-- Stores your tasks for later uses.
-- Delete task
-- Clear all completed tasks with one click.
-- Sort between the active, all and completed tasks.
-- live count of all the tasks.
+- Product catalog with detailed information.
+- Product reviews to build customer trust
+- Responsive design for optimal viewing on different devices
+- Customer support for assistance and queries.
 
 
 ## Other Details
