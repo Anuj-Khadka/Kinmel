@@ -20,23 +20,23 @@ Our ecommerce website project is a comprehensive platform that enables users to 
 ## Technologies
 The ecommerce website utilizes a range of modern technologies to provide an efficient and interactive shopping experience. JavaScript and CSS are used for dynamic and visually appealing web design. React and React Redux framework enable seamless UI rendering and state management. The integration with the Fake Shop API allows for realistic product data and inventory management. These technologies collectively enhance the website's performance, user experience, and overall functionality.
 <p>
-    <a href="https://pytorch.org/" target="_blank" rel="noreferrer">
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/" target="_blank" rel="noreferrer">
         <img src="https://img.shields.io/badge/HTML-e34c26?style=for-the-badge&logo=HTML&logoColor=white" alt="html"/>
     </a>
-    <a href="https://www.python.org" target="_blank" rel="noreferrer">
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer">
         <img src="https://img.shields.io/badge/CSS-264de4?style=for-the-badge&logo=CSS&logoColor=blue"
             alt="css" />
     </a>
-    <a href="https://pytorch.org/" target="_blank" rel="noreferrer">
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JAVASCRIPT" target="_blank" rel="noreferrer">
         <img src="https://img.shields.io/badge/JavaScript-F0DB4F?style=for-the-badge&logo=JavaScript&logoColor=white" alt="javascript"/>
     </a>
-    <a href="https://www.python.org" target="_blank" rel="noreferrer">
+    <a href="https://react.dev/" target="_blank" rel="noreferrer">
         <img src="https://img.shields.io/badge/React-61DBFB?style=for-the-badge&logo=React&logoColor=blue"
             alt="react" />
-    </a><a href="https://www.python.org" target="_blank" rel="noreferrer">
+    </a><a href="https://react-redux.js.org/" target="_blank" rel="noreferrer">
         <img src="https://img.shields.io/badge/React%20Redux-764abc?style=for-the-badge&logo=Redux&logoColor=blue"
             alt="react" />
-    </a><a href="https://www.python.org" target="_blank" rel="noreferrer">
+    </a><a href="https://fakestoreapi.com/" target="_blank" rel="noreferrer">
         <img src="https://img.shields.io/badge/Fake%20Shop%20API-61DBFB?style=for-the-badge"
             alt="react" />
     </a>
@@ -61,7 +61,7 @@ Live demo at <a href="https://hamrokinmel.netlify.app" target="_blank">Kinmel</a
 ### Run Locally
 - Clone the reposiory in your local machine.
 ```bash
-git clone https://github.com/Anuj-Khadka/mathify.git
+git clone https://github.com/Anuj-Khadka/kinmel.git
 ```
 - Open the terminal inside the project folder.
 - Run the command
