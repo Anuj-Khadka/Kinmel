@@ -18,7 +18,7 @@ Our ecommerce website project is a comprehensive platform that enables users to 
 
 
 ## Technologies
-Built using HTML, CSS, JavaScript, and React, our Todo App offers a seamless and intuitive task management experience.
+The ecommerce website utilizes a range of modern technologies to provide an efficient and interactive shopping experience. JavaScript and CSS are used for dynamic and visually appealing web design. React and React Redux framework enable seamless UI rendering and state management. The integration with the Fake Shop API allows for realistic product data and inventory management. These technologies collectively enhance the website's performance, user experience, and overall functionality.
 <p>
     <a href="https://pytorch.org/" target="_blank" rel="noreferrer">
         <img src="https://img.shields.io/badge/HTML-e34c26?style=for-the-badge&logo=HTML&logoColor=white" alt="html"/>
